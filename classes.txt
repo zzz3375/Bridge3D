@@ -1,0 +1,10 @@
+Nonbridge
+Slab
+Beam
+Column
+Nonestructural
+Rail
+Sleeper
+Concrete damage
+Exposed rebar
+Nondamage
