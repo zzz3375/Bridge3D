@@ -60,7 +60,7 @@ undistortor_cmd = [
     "--input_path", Path(sparse_dir)/"1",
     "--output_path", str(dense_dir),
 ]
-# subprocess.run(undistortor_cmd, check=True, shell=True)
+subprocess.run(undistortor_cmd, check=True, shell=True)
 
 patch_match_stereo_cmd = [
     "colmap", "patch_match_stereo",
@@ -69,7 +69,7 @@ patch_match_stereo_cmd = [
     "--PatchMatchStereo.geom_consistency", "true",
     "--PatchMatchStereo.max_image_size", "3000",
 ]
-# subprocess.run(patch_match_stereo_cmd, check=True, shell=True)
+subprocess.run(patch_match_stereo_cmd, check=True, shell=True)
 
 stereo_fusion_masked_cmd = [
     "colmap", "stereo_fusion",
@@ -77,6 +77,6 @@ stereo_fusion_masked_cmd = [
     "--StereoFusion.mask_path", dense_dir/"masks",
     "--output_path", dense_dir/"fused_masked.ply"
 ]
-# subprocess.run(stereo_fusion_masked_cmd, check=True, shell=True)
+subprocess.run(stereo_fusion_masked_cmd, check=True, shell=True)
 
 
